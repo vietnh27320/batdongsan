@@ -16,6 +16,10 @@ public class BuildingEntity {
 
 	@Column(name = "ward")
 	private String ward;
+	
+	@Column(name = "district")
+	private String district;
+
 
 	@Column(name = "numberofbasement")
 	private Integer numberOfBasement;
@@ -26,6 +30,14 @@ public class BuildingEntity {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
 	}
 
 	public String getName() {

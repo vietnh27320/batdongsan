@@ -8,6 +8,18 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    
+    <!-- sitemesh filter -->
+    <filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -24,7 +36,7 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/context/dispatcher-servlet.xml</param-value>
         </init-param>
-        <load-on-startup>1</load-on-startup>
+        <load-on-startup>1</load-on-startup> 
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>

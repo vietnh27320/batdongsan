@@ -4,6 +4,7 @@ public class BuildingDTO {
 	private Long id;
 	private String name;
 	private String ward;
+	private String district;
 	private Integer numberOfBasement;
 
 	public Long getId() {
@@ -36,6 +37,14 @@ public class BuildingDTO {
 
 	public void setNumberOfBasement(Integer numberOfBasement) {
 		this.numberOfBasement = numberOfBasement;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
 	}
 
 }
