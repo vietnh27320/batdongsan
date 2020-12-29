@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
+<c:url var="buildingAPI" value="/api/building"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,16 +86,16 @@
 							function() {
 								return $(this).val();
 							}).get();
-					data['buildingIds'] = buildingIds;
-					deleteBuilding(data);
+					// data['buildingIds'] = buildingIds;
+					deleteBuilding(buildingIds);
 				});
 
 		function deleteBuilding(data) {
 			$.ajax({
 				type : "DELETE",
-				url : "http://localhost:8080/api-building",
+				url : "${buildingAPI}",
 				data : JSON.stringify(data),
-				dataType : "json",
+				// dataType : "json",
 				contentType : "application/json",
 				success : function(response) {
 					console.log('success');

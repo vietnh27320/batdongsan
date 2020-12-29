@@ -15,13 +15,13 @@ public class CustomerService implements ICustomerService {
 	@Override
 	public List<CustomerDTO> findAll() {
 		List<CustomerDTO> results = new ArrayList<>();
-		List<CustomerEntity> customerEntities = customerRepository.findAll();
-		for (CustomerEntity item : customerEntities) {
-			CustomerDTO customerDTO = new CustomerDTO();
-			customerDTO.setFullName(item.getFullName());
-			customerDTO.setPhone(item.getPhone());
-			results.add(customerDTO);
-		}
+//		List<CustomerEntity> customerEntities = customerRepository.findAll();
+//		for (CustomerEntity item : customerEntities) {
+//			CustomerDTO customerDTO = new CustomerDTO();
+//			customerDTO.setFullName(item.getFullName());
+//			customerDTO.setPhone(item.getPhone());
+//			results.add(customerDTO);
+//		}
 		return results;
 	}
 
